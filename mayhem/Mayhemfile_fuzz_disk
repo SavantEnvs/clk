@@ -1,0 +1,9 @@
+project: savantenvs/clk
+target: fuzz_disk
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_disk/testsuite
+dictionary: /mayhem/mayhem/fuzz_disk/fuzz_disk.dict
+cmds:
+  - cmd: /mayhem/fuzz_disk
+    libfuzzer: true
